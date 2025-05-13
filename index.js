@@ -21,9 +21,8 @@ app.listen(process.env.PORT, () => {
 
 app.use(
     cors({
-    origin: ["http://localhost:8081", `${process.env.REACT_APP_BASE_URL}`],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
   })
 );
 
