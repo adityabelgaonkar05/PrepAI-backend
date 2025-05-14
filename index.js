@@ -6,7 +6,9 @@ const SignInRoute = require('./routes/SignIn');
 const SignUpRoute = require('./routes/SignUp');
 const AuthCheckRoute = require('./routes/AuthCheck');
 const PdfToQuizRoute = require('./routes/PdfToQuiz');
-const GetQuizByCode = require('./routes/GetQuizByCode');
+const GetQuizByCodeRoute = require('./routes/GetQuizByCode');
+const ValidateAnswerRoute = require('./routes/ValidateAnswer');
+const GetAllQuizzesRoute = require('./routes/GetAllQuizzes');
 
 const app = express();
 
@@ -34,4 +36,6 @@ app.use("/", SignInRoute);
 app.use("/", SignUpRoute);
 app.use("/", AuthCheckRoute);
 app.use("/", PdfToQuizRoute);
-app.use("/", GetQuizByCode);
+app.use("/", GetQuizByCodeRoute);
+app.use("/", ValidateAnswerRoute);
+app.use("/", GetAllQuizzesRoute);
