@@ -5,6 +5,7 @@ require('dotenv').config();
 const SignInRoute = require('./routes/SignIn');
 const SignUpRoute = require('./routes/SignUp');
 const AuthCheckRoute = require('./routes/AuthCheck');
+const PdfToQuizRoute = require('./routes/PdfToQuiz');
 
 const app = express();
 
@@ -31,3 +32,4 @@ app.use(express.json());
 app.use("/", SignInRoute);
 app.use("/", SignUpRoute);
 app.use("/", AuthCheckRoute);
+app.use("/", PdfToQuizRoute);

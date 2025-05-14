@@ -6,7 +6,16 @@ const quizSchema = new mongoose.Schema({
         ref: 'PdfContent',
         required: true
     },
-    quizContent: {
+    Title: {
+        type: String,
+        required: true
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    quizContent: [{
         question: {
             type: String,
             required: true
@@ -19,7 +28,7 @@ const quizSchema = new mongoose.Schema({
             type: String,
             required: true
         }
-    },
+    }],
     textQuestions: [{
         type: String
     }],
