@@ -1,5 +1,5 @@
 const User = require('../models/UserModel');
-const {hash, unhash} = require('../utils/hashUnhash');
+const {hash} = require('../utils/hashUnhash');
 
 module.exports = async (req, res) => {
     const { email, password, username } = req.body;

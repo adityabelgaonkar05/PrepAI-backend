@@ -1,7 +1,6 @@
 const User = require('../models/UserModel');
 const Quiz = require('../models/QuizModel');
 const resolveTokens = require('../utils/resolveTokens');
-const { link } = require('../routes/PdfToQuiz');
 
 module.exports = async (req, res) => {
     const { token } = req.body;

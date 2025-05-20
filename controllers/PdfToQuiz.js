@@ -4,7 +4,6 @@ const pdfParse = require('pdf-parse');
 const { createHash } = require('crypto');
 const axios = require('axios');
 const resolveTokens = require('../utils/resolveTokens');
-const { resolve } = require('path');
 require('dotenv').config();
 const getNanoid = async () => {
   const { nanoid } = await import('nanoid');
